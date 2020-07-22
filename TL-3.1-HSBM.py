@@ -69,11 +69,6 @@ class RecursiveCluster(NodeMixin):
         labels.columns = ["inds"]
         self.labels = labels
 
-        if root_inds is None:
-            print("No `root_inds` were input; assuming this is the root.")
-            root_inds = labels["inds"]
-        self.root_inds = root_inds
-
     def fit(self):
         while True:
             all_k = []
